@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+        body{background: royalblue;}
+        body, h1, h2, p{margin:0;
+                        padding: 0}
+        div.contents{width: 1024px;
+                        margin: auto;
+                        padding:50px;
+                        align-content: center;
+                        text-align: center;
+                }
+                </style>
+                <title>소음공해</title>
+        </head>
+        <body>
+                <section>
+                        <div class="contents">
+                                <img src="y1.png" id="y1"
+                                        style="height: 400px;">
+                                <audio src="maracas.mp3" id="maracas"></audio>
+
+                                <img src="y3.png" id="y3"
+                                        style="height: 350px;">
+                                <audio src="drum.mp3" id="drum"></audio>
+
+                                <img src="y5.png" id="y5"
+                                        style="height: 350px;">
+                                <audio src=" tada.mp3" id="tada"></audio>
+
+
+                        <script>
+        let state = false;
+         y1.onclick = function(){    
+                 if(!state){
+                         maracas.play();        
+                         y1.src = "y2.gif";
+                         state = true;
+                 }else{
+                         maracas.pause();
+                         y1.src = "y1.png";
+                         state = false;
+                 }
+         }
+
+        let state2 = false;
+         y3.onclick = function(){    
+                 if(!state2){
+                         drum.play();        
+                         y3.src = "y4.gif";
+                         state2 = true;
+                 }else{
+                         drum.pause();
+                         y3.src = "y3.png";
+                         state2 = false;
+                 }
+         }
+        let state3 = false;
+        y5.onclick = function(){
+                if(!state3){
+                        tada.play();
+                        y5.src = "y6.png";
+                        state3 = true;
+                }
+        }
+
+        tada.onended = function(){
+                y5.src = "y5.png";
+                state3 = false;
+        }
+                        </script>
+                        </div>
+                </section>
+        </body>
+</html>
